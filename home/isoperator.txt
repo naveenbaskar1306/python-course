@@ -1,0 +1,12 @@
+Data Type	 Example	is Result       	Why?
+Small Integers   
+(-5 to 256)	 a=100; b=100	✅ True         	Cached (same memory)
+Large Integers   a=1000; b=1000	 ❌ Fals            Different objects
+Float	         a=10.5; b=10.5   ❌ False              Not cached
+Short String	"hello"	        ✅ Often True	         Interned (cached)
+Long String	"hello world python"❌ Often False	Not guaranteed
+List	         [1,2,3]	❌ False	       Mutable → new object
+Tuple	        (1,2,3)	    🤔 Maybe True/False 	Immutable, may reuse
+Dictionary	{"a":1}	    ❌ False	          Always new object
+Set	        {1,2,3}	    ❌ False	              Always new object
+None	         None	    ✅ True	              Singleton
